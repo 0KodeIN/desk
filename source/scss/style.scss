@@ -1,0 +1,67 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$strongWeight: 1000;
+$font-size: 30px;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  margin: 0;
+  padding: 0;
+}
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+}
+.card{
+    border: 2px solid black;
+    width: 100vw;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    width: 15vw;
+    margin-right: 3vw;
+    margin-top: 3vw;
+
+}
+.card span{
+   font-weight: $strongWeight;
+}
+h1{
+    text-align: center;
+}
+header{
+    height: 250px;
+    // background-color: black;
+}
+.authForm{
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    width: 15vw;
+    margin-top: 1vw;
+    left: 40%;
+    right: 50%;
+    top: 20%;
+}
+.hui{
+    margin-left: 150px;
+    color: blue;
+}
+.auth-label{
+    text-align: center;
+    font-size: $font-size;
+
+}
+.btn-auth{
+    font-size: $font-size;
+    margin-top: 10px;
+}
+a{
+    text-decoration: none;
+    color: $primary-color;
+}
+
+   

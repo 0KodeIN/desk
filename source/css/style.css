@@ -1,0 +1,69 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card {
+  border: 2px solid black;
+  width: 100vw;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  width: 15vw;
+  margin-right: 3vw;
+  margin-top: 3vw;
+}
+
+.card span {
+  font-weight: 1000;
+}
+
+h1 {
+  text-align: center;
+}
+
+header {
+  height: 250px;
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 15vw;
+  margin-top: 1vw;
+  left: 40%;
+  right: 50%;
+  top: 20%;
+}
+
+.hui {
+  margin-left: 150px;
+  color: blue;
+}
+
+.auth-label {
+  text-align: center;
+  font-size: 30px;
+}
+
+.btn-auth {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/*# sourceMappingURL=style.css.map */
