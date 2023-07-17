@@ -1,7 +1,7 @@
 
 <div class="wrapper">
 <?  
-print_r($result);
+
 for($i=0;$i<count($result);$i++) { ?>
 <a href="/detail.php?id=<?=$result[$i]['id_request']?>" class="def">
 <div class="card" id=<? echo $result[$i]['id_request']?>>

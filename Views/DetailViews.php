@@ -1,13 +1,12 @@
 <div class="wrapper">
 <?  
 
-for($i=0;$i<count($this->request->str);$i++) { ?>
-<a href="/detail.php?id=<?=$this->request->str[$i]['id_request']?>" class="def">
-<div class="card" id=<? echo $this->request->str[$i]['id_request']?>>
-    <span>№<?echo $this->request->str[$i]['id_request']?></span>
-    <p><?echo $this->request->str[$i]['name']?></p>
-    <p><?echo $this->request->str[$i]['description']?></p>
+for($i=0;$i<count($result);$i++) { ?>
+
+<div class="card" id=<? echo $result[$i]['id_request']?>>
+    <span>№<?echo $result[$i]['id_request']?></span>
+    <p><?echo $result[$i]['name']?></p>
+    <p><?echo $result[$i]['description']?></p>
 </div>
 <? } ?>
-</a>
 </div>

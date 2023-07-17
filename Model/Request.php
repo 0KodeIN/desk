@@ -5,16 +5,20 @@ class Request
 {
     private $dbh;
     public $str = '';
-    // public $detail = '';
+
     public function __construct()
     {        
+        $this->connection();
+
+    }
+    private function connection()
+    {
         try {   
             $this->dbh = new PDO(DATABASE_DSN, DATABASE_USERNAME, DATABASE_PASSWORD);  
         }  
           catch(PDOException $e) {  
               echo $e->getMessage();  
         }
-
     }
     public function getAllRequests(){
 
