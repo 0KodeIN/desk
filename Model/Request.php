@@ -1,16 +1,16 @@
 <?php
 require_once '/OSPanel/domains/desk/Configuration/config.php';
 
-class Request
+ abstract class Request
 {
     private $dbh;
     public $str = '';
 
-    public function __construct()
-    {        
-        $this->connection();
+    // public function __construct()
+    // {        
+    //     $this->connection();
 
-    }
+    // }
     private function connection()
     {
         try {   
@@ -22,6 +22,7 @@ class Request
     }
     public function getAllRequests(){
 
+        $this->connection();
         $search_sql = "SELECT * FROM request";
         $sth = $this->dbh->prepare($search_sql);
         $sth->execute();
@@ -31,6 +32,7 @@ class Request
     }
     public function getRequestDetail($id){
 
+        $this->connection();
         $search_sql = "SELECT * FROM request where id_request = $id";
         $sth = $this->dbh->prepare($search_sql);
         $sth->execute();
@@ -39,13 +41,9 @@ class Request
         return $result;
 
     }
+    abstract public function increaseRevenue($value);
 
 
 }
-// $key = new Request();
-// $key->getRequestDetail(1);
 
-// $key = $key->__construct();
-// print_r($key->str);
-// print_r ($key->str);
 ?>

@@ -17,7 +17,6 @@
 require_once './Controller/RequestController.php';
 $request = new RequestController();
 $request->getRequest();
-print_r($request->str)
 ?>
 </body>
 </html>
