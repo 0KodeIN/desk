@@ -5,7 +5,7 @@ class Request
 {
     private $dbh;
     public $str = '';
-    public $detail = '';
+    // public $detail = '';
     public function __construct()
     {        
         try {   
@@ -17,29 +17,23 @@ class Request
 
     }
     public function getAllRequests(){
+
         $search_sql = "SELECT * FROM request";
         $sth = $this->dbh->prepare($search_sql);
         $sth->execute();
-        // $sth->execute();
         $result = $sth->fetchAll((PDO::FETCH_ASSOC));
         $this->str = $result;
-        // $this->str = json_encode($result);
-        // print_r($result);
-        return $this->str;
-        // return $result[0]['id_request'];
+        return $result;
     }
     public function getRequestDetail($id){
 
         $search_sql = "SELECT * FROM request where id_request = $id";
         $sth = $this->dbh->prepare($search_sql);
         $sth->execute();
-        // $sth->execute();
         $result = $sth->fetchAll((PDO::FETCH_ASSOC));
         $this->str = $result;
-        // $this->str = json_encode($result);
-        // print_r($result);
-        return $this->str;
-        // return $result[0]['id_request'];
+        return $result;
+
     }
 
 

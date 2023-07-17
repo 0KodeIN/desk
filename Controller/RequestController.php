@@ -9,10 +9,10 @@ final class RequestController extends Request
     {
         $this->request = new Request();
     }
-    public function getRequest(){
+    public function getRequest():void {
 
        
-        $this->request->getAllRequests();
+        $result = $this->request->getAllRequests();
         if ($this->request == '') { // проверка ответа
             print_r('error400');
         } elseif ($this->request == 'isset') {
@@ -20,13 +20,12 @@ final class RequestController extends Request
         } else {
             require '/OSPanel/domains/desk/Views/RequestViews.php'; // Подключение представления
         }
-        // return  $this->request;
     }
-    public function getOneRequest(){
+    public function getOneRequest(): void {
 
 
-         $id = $_GET['id'];
-        $this->request->getRequestDetail($id);
+        $id = $_GET['id'];
+        $result = $this->request->getRequestDetail($id);
         if ( $this->request == '') { // проверка ответа
             print_r('error400');
         } elseif ( $this->request == 'isset') {
